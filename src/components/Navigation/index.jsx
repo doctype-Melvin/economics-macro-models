@@ -59,7 +59,8 @@ const StyledNavigationLink = styled.a`
 
 const ToggleButton = styled.button`
 	background-color: transparent;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+	height: 35px;
 	border: none;
 	grid-column: 2 / 3;
 	grid-row: 1 / 3;
