@@ -10,18 +10,16 @@ export default function Canvas() {
 
 		const width = canvas.width;
 		const height = canvas.height;
-		const centerX = width / 2;
-		const centerY = height / 2;
 
 		context.clearRect(0, 0, width, height);
 
 		context.beginPath();
-		context.moveTo(0, centerY);
-		context.lineTo(width, centerY);
-		context.moveTo(centerX, 0);
-		context.lineTo(centerX, width);
+		context.moveTo(0, height - 1.5);
+		context.lineTo(width, height - 1.5);
+		context.moveTo(1.5, height);
+		context.lineTo(1.5, 1.5);
 		context.strokeStyle = "black";
-		context.lineWidth = 2;
+		context.lineWidth = 3;
 		context.stroke();
 	}, []);
 
@@ -32,4 +30,5 @@ const StyledCanvas = styled.canvas`
 	background-color: lightcyan;
 	grid-column: 2 / 3;
 	justify-self: center;
+	padding: 20px;
 `;

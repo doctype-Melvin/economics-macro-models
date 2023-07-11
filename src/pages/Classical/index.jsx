@@ -27,11 +27,3 @@ const PageTitle = styled.h1`
 const PageDescription = styled.p`
 	grid-column: 2 / 3;
 `;
-
-const CoordinateContainer = styled.div`
-	height: 15rem;
-	width: 15rem;
-	background-color: lightcyan;
-	grid-column: 2 / 3;
-	justify-self: center;
-`;
