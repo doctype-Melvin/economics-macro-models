@@ -1,3 +1,9 @@
+import "./styles.css";
+
 export default function Content({ children }) {
-	return <section>{children}</section>;
+	return (
+		<section aria-label="Content container" className="content-container">
+			{children}
+		</section>
+	);
 }
