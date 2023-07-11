@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import Canvas from "../../components/Canvas";
 
 export default function ClassicalPage() {
 	return (
@@ -7,7 +8,7 @@ export default function ClassicalPage() {
 			<PageDescription>
 				This page will discuss the Classical Model of economics.
 			</PageDescription>
-			<CoordinateContainer />
+			<Canvas />
 		</SinglePageContainer>
 	);
 }
