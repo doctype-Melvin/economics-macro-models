@@ -1,18 +1,29 @@
+import { styled } from "styled-components";
+
 export default function Footer() {
 	return (
-		<section>
+		<FooterContainer>
 			<span>
 				{" "}
 				&copy; 2023{" "}
-				<a
+				<StyledFooterLink
 					aria-label="Link to doctype-Melvin's Github Profile"
 					href="https://www.github.com/doctype-Melvin"
 					target="_blank"
 					rel="noreferrer"
 				>
 					doctype-Melvin
-				</a>
+				</StyledFooterLink>
 			</span>
-		</section>
+		</FooterContainer>
 	);
 }
+
+const FooterContainer = styled.section`
+	text-align: center;
+`;
+
+const StyledFooterLink = styled.a`
+	text-decoration: none;
+	color: crimson;
+`;

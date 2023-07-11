@@ -1,9 +1,13 @@
-import "./styles.css";
+import { styled } from "styled-components";
 
 export default function Content({ children }) {
 	return (
-		<section aria-label="Content container" className="content-container">
+		<ContentContainer aria-label="Content container">
 			{children}
-		</section>
+		</ContentContainer>
 	);
 }
+
+const ContentContainer = styled.section`
+	flex: 1;
+`;

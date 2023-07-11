@@ -1,10 +1,14 @@
-import "./styles.css";
+import { styled } from "styled-components";
 
 export default function Dummy() {
 	return (
-		<section className="page-content">
+		<PageContentContainer className="page-content">
 			<h1>Hello World!</h1>
 			<p>This is a dummy page</p>
-		</section>
+		</PageContentContainer>
 	);
 }
+
+const PageContentContainer = styled.section`
+	flex: 2;
+`;
