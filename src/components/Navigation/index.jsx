@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { GiHamburgerMenu as Burger } from "react-icons/gi";
 import { TfiClose as CloseIcon } from "react-icons/tfi";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Navigation() {
@@ -12,25 +13,31 @@ export default function Navigation() {
 		<StyledNavigation>
 			{expandNavigation && (
 				<>
-					<StyledNavigationLink href="#" aria-label="Link to Classical Model">
+					<StyledNavigationLink
+						to="/classical"
+						aria-label="Link to Classical Model"
+					>
 						Classical
 					</StyledNavigationLink>
-					<StyledNavigationLink href="#" aria-label="Link to Keynesian Model">
+					<StyledNavigationLink
+						to="/keynesian"
+						aria-label="Link to Keynesian Model"
+					>
 						Keynesian
 					</StyledNavigationLink>
-					<StyledNavigationLink href="#" aria-label="Link to IS-LM Model">
+					<StyledNavigationLink to="/is-lm" aria-label="Link to IS-LM Model">
 						IS-LM
 					</StyledNavigationLink>
-					<StyledNavigationLink href="#" aria-label="Link to AS-AD Model">
+					<StyledNavigationLink to="/as-ad" aria-label="Link to AS-AD Model">
 						AS-AD
 					</StyledNavigationLink>
 					<StyledNavigationLink
-						href="#"
+						to="/new-keynesian"
 						aria-label="Link to New Keynesian Model"
 					>
 						New Keynesian
 					</StyledNavigationLink>
-					<StyledNavigationLink href="#" aria-label="Link to DSGE Model">
+					<StyledNavigationLink to="/dsge" aria-label="Link to DSGE Model">
 						DSGE
 					</StyledNavigationLink>
 				</>
@@ -51,7 +58,7 @@ const StyledNavigation = styled.nav`
 	row-gap: 0.5rem;
 `;
 
-const StyledNavigationLink = styled.a`
+const StyledNavigationLink = styled(Link)`
 	text-decoration: none;
 	color: black;
 	grid-column: 1 / 2;

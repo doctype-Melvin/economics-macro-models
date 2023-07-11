@@ -1,16 +1,21 @@
 import Navigation from "./components/Navigation";
 import Content from "./components/Content";
-import Dummy from "./pages/Dummy";
 import Footer from "./components/Footer";
 import { styled } from "styled-components";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ClassicalPage from "./pages/Classical";
 
 function App() {
 	return (
 		<AppContainer aria-label="App Container">
-			<Navigation />
-			<Content>
-				<Dummy />
-			</Content>
+			<BrowserRouter>
+				<Navigation />
+				<Content>
+					<Routes>
+						<Route path="/classical" element={<ClassicalPage />} />
+					</Routes>
+				</Content>
+			</BrowserRouter>
 			<Footer />
 		</AppContainer>
 	);
